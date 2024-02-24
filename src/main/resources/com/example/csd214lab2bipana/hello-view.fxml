@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="467.0" prefWidth="485.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csd214lab2bipana.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <TextField fx:id="iD" promptText="id" />
+   <TextField fx:id="managers" promptText="Managers" />
+   <TextField fx:id="departments" promptText="Departments" />
+   <TextField fx:id="workers" promptText="Workers" />
+   <Button mnemonicParsing="false" onAction="#UpdateData" text="Update" />
+   <Button mnemonicParsing="false" onAction="#DeleteData" text="Delete" />
+   <Button mnemonicParsing="false" onAction="#InsertData" text="Insert" />
+   <Button mnemonicParsing="false" onAction="#ViewData" text="View" />
+
+    <Button onAction="#onHelloButtonClick" text="Click">
+      <graphic>
+      
+          <Label fx:id="welcomeText" />
+      </graphic></Button>
+   <TableView fx:id="restaurant" prefHeight="155.0" prefWidth="348.0">
+     <columns>
+       <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+       <TableColumn fx:id="Managers" prefWidth="75.0" text="Managers" />
+         <TableColumn fx:id="Departments" prefWidth="75.0" text="Departments" />
+         <TableColumn fx:id="Workers" prefWidth="75.0" text="Workers" />
+     </columns>
+   </TableView>
+</VBox>
